@@ -16,13 +16,13 @@ Supports the following operations:
 
 ## Example
 
-POST localhost:3001/A1 { "value": 13 }
-POST localhost:3001/A2 { "value": 14 }
-GET localhost:3001/A1 -> { "A1": 13 }
-POST localhost:3001/A3 { "value": "=A1+A2" }
-GET localhost:3001/A3 -> { "A3": 27 }
-POST localhost:3001/A4 { "value": "=A1+A2+A3" }
-GET lcalhost:3001/A4 -> { "A4": 54 }
+- `POST localhost:3001/A1 { "value": 13 }`
+- `POST localhost:3001/A2 { "value": 14 }`
+- `GET localhost:3001/A1 -> { "A1": 13 }`
+- `POST localhost:3001/A3 { "value": "=A1+A2" }`
+- `GET localhost:3001/A3 -> { "A3": 27 }`
+- `POST localhost:3001/A4 { "value": "=A1+A2+A3" }`
+- `GET lcalhost:3001/A4 -> { "A4": 54 }`
 
 ## Implementation
 
