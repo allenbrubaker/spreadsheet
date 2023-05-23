@@ -26,7 +26,7 @@ Supports the following operations:
 
 ## Implementation
 
-- Solution is implemented using a directed acyclic graph (DAG) that is built up dynamically as the user invokes `setCellValue`. Invoking this operation repeatedly, where the value is a sum, will add parents to the DAG by composing DAGs together as children.
+- Implemented using a directed acyclic graph (DAG) that is built up dynamically as the user invokes `setCellValue`. Invoking this operation repeatedly, where the value is a sum, will add parents to the DAG by composing DAGs together as children.
 - If a cell (vertex/node) value is updated, the resulting graph is validated to ensure no cycles are detected, else an exception is thrown. Cycles do not need to be checked on new cell additions but only on existing cell updates, because parents may already exist for these cells where a cycle can potentially be induced.
 - If a cell expression references cells that do not exist and have no value, a cell with value null is created in order to be optimistic and support all possible scenarios.
 - CellId can be any string value including "5" so be wary when creating expressions.
